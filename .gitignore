@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 lab/registros/
 medicion/datos/
+evaluacion/datos/

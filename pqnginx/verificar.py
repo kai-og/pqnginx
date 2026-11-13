@@ -54,11 +54,13 @@ def analizar(salida: str) -> tuple[str | None, bool, int | None]:
     return grupo, hrr, int(h.group(1)) if h else None
 
 
-def probar(host: str, puerto: int, sni: str, perfil: str, espera: float = 10) -> Prueba:
-    """Hace un handshake TLS 1.3 con un perfil y una petición HTTP mínima."""
+def probar(host: str, puerto: int, sni: str, perfil: str, espera: float = 10, grupos: str | None = None,
+           version: str = "-tls1_3") -> Prueba:
+    """Hace un handshake (TLS 1.3 salvo que se indique otra versión) con un perfil o una lista de grupos
+    dada, y una petición HTTP mínima."""
     orden = [
         "openssl", "s_client", "-connect", f"{host}:{puerto}", "-servername", sni,
-        "-tls1_3", "-groups", PERFILES[perfil], "-msg", "-ign_eof",
+        version, "-groups", grupos or PERFILES[perfil], "-msg", "-ign_eof",
     ]
     peticion = f"GET / HTTP/1.0\r\nHost: {sni}\r\n\r\n"
     try:

@@ -14,3 +14,11 @@ services:
     depends_on:
       - servidor
     command: ["sleep", "infinity"]
+
+  # Banco de pruebas con configuraciones reales (evaluacion/banco.py). No arranca con `up`.
+  banco:
+    build: ./banco
+    profiles: ["banco"]
+    volumes:
+      - ..:/app
+    working_dir: /app

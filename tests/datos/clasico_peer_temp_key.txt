@@ -1,0 +1,292 @@
+Connecting to 172.21.0.2
+CONNECTED(00000003)
+>>> TLS 1.0, RecordHeader [length 0005]
+    16 03 01 00 ec
+>>> TLS 1.3, Handshake [length 00ec], ClientHello
+    01 00 00 e8 03 03 8f 25 2f 8b b1 74 2e f9 d9 5e
+    b4 c5 6d 89 97 17 aa 27 fe 6c 76 f5 cd b3 83 49
+    66 48 c1 e8 ec 28 20 5f 83 75 3b a5 c0 63 bb 54
+    c7 bd 6f 22 be f5 63 34 93 d8 80 b9 dd 46 52 04
+    95 5b 72 9d a5 3b b6 00 06 13 02 13 03 13 01 01
+    00 00 99 00 00 00 0b 00 09 00 00 06 61 2e 74 65
+    73 74 00 0b 00 04 03 00 01 02 00 0a 00 04 00 02
+    00 1d 00 23 00 00 00 16 00 00 00 17 00 00 00 0d
+    00 2a 00 28 09 05 09 06 09 04 04 03 05 03 06 03
+    08 07 08 08 08 1a 08 1b 08 1c 08 09 08 0a 08 0b
+    08 04 08 05 08 06 04 01 05 01 06 01 00 2b 00 03
+    02 03 04 00 2d 00 02 01 01 00 33 00 26 00 24 00
+    1d 00 20 a5 57 bc e1 6e 61 c2 44 33 45 6f 5d 74
+    81 46 e1 59 c3 72 52 13 88 a1 b3 ab e2 2a 13 c9
+    60 0c 78 00 1b 00 05 04 00 01 00 03
+<<< TLS 1.2, RecordHeader [length 0005]
+    16 03 03 00 7a
+<<< TLS 1.3, Handshake [length 007a], ServerHello
+    02 00 00 76 03 03 1d 28 61 ec 89 ab ed b0 e8 4a
+    10 f0 e4 89 fc a1 5b 78 75 4f ec 79 6f 83 c3 65
+    b8 45 5b f0 7f c3 20 5f 83 75 3b a5 c0 63 bb 54
+    c7 bd 6f 22 be f5 63 34 93 d8 80 b9 dd 46 52 04
+    95 5b 72 9d a5 3b b6 13 02 00 00 2e 00 2b 00 02
+    03 04 00 33 00 24 00 1d 00 20 0d e9 b5 2e 93 ba
+    7c 97 c2 50 5b b5 69 f8 41 7e 44 26 64 da 76 19
+    14 75 a3 9b bf b0 c9 02 39 32
+<<< TLS 1.2, RecordHeader [length 0005]
+    14 03 03 00 01
+<<< TLS 1.3, ChangeCipherSpec [length 0001]
+    01
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 31
+<<< TLS 1.3, InnerContent [length 0001]
+    16
+<<< TLS 1.3, Handshake [length 0020], EncryptedExtensions
+    08 00 00 1c 00 1a 00 00 00 00 00 0a 00 12 00 10
+    11 ec 00 1d 00 17 00 1e 00 18 00 19 01 00 01 01
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 01 b4
+<<< TLS 1.3, InnerContent [length 0001]
+    16
+<<< TLS 1.3, Handshake [length 01a3], Certificate
+    0b 00 01 9f 00 00 01 9b 00 01 96 30 82 01 92 30
+    82 01 38 a0 03 02 01 02 02 14 24 ad 64 2a b1 e9
+    dd 1d 3c f8 a0 78 ed 33 f1 6e ab eb 0d 3b 30 0a
+    06 08 2a 86 48 ce 3d 04 03 02 30 11 31 0f 30 0d
+    06 03 55 04 03 0c 06 61 2e 74 65 73 74 30 1e 17
+    0d 32 36 31 31 30 36 31 33 34 38 31 39 5a 17 0d
+    32 36 31 32 30 36 31 33 34 38 31 39 5a 30 11 31
+    0f 30 0d 06 03 55 04 03 0c 06 61 2e 74 65 73 74
+    30 59 30 13 06 07 2a 86 48 ce 3d 02 01 06 08 2a
+    86 48 ce 3d 03 01 07 03 42 00 04 ca ce e8 b2 84
+    0e cd 83 a7 1d 20 1c e5 39 de 50 d8 82 35 d6 e0
+    62 f9 77 c0 51 01 08 e7 3e 4a a1 72 48 ed 6a 96
+    93 7d 28 45 6a f9 ff 1d ae b8 0f e9 1d 43 4d 32
+    d7 ec a3 5a 1d bf ed 1d a0 1f 42 a3 6e 30 6c 30
+    1d 06 03 55 1d 0e 04 16 04 14 11 08 b3 58 f0 a8
+    13 c7 32 d3 e4 26 60 d3 d4 c2 e4 12 27 64 30 1f
+    06 03 55 1d 23 04 18 30 16 80 14 11 08 b3 58 f0
+    a8 13 c7 32 d3 e4 26 60 d3 d4 c2 e4 12 27 64 30
+    0f 06 03 55 1d 13 01 01 ff 04 05 30 03 01 01 ff
+    30 19 06 03 55 1d 11 04 12 30 10 82 06 61 2e 74
+    65 73 74 82 06 62 2e 74 65 73 74 30 0a 06 08 2a
+    86 48 ce 3d 04 03 02 03 48 00 30 45 02 20 24 df
+    e6 ea af ad 9c 41 d8 81 e6 1c 8e a9 ca 3b e5 de
+    1b 57 09 e9 c5 79 27 5e 80 0c 93 5d ba 3b 02 21
+    00 88 df e5 ed 2b 7b b1 ad a7 bd bc cb a8 20 7e
+    fe 1d e2 17 30 b9 f7 f8 40 96 e4 29 d5 38 2b 3e
+    a6 00 00
+depth=0 CN=a.test
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 CN=a.test
+verify return:1
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 5f
+<<< TLS 1.3, InnerContent [length 0001]
+    16
+<<< TLS 1.3, Handshake [length 004e], CertificateVerify
+    0f 00 00 4a 04 03 00 46 30 44 02 20 22 69 0c c6
+    c0 6e 4a 4b 04 e3 69 38 73 2c 4b 8d f8 66 2d 44
+    44 9d cf 03 4b 93 4e 61 1f 06 1c 5a 02 20 7e 89
+    81 1d 37 37 e3 94 b2 a2 3e 30 74 ea 86 1f 34 27
+    6c 8a c2 8a 0e 4d ba 90 15 f0 5d 55 e8 4d
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 45
+<<< TLS 1.3, InnerContent [length 0001]
+    16
+<<< TLS 1.3, Handshake [length 0034], Finished
+    14 00 00 30 9e 58 fd 97 0f 3d 87 33 c2 55 42 9f
+    9f 41 7d aa e5 27 b3 8e bc 6c 10 c1 55 3b e2 ce
+    44 b8 17 07 b0 b5 61 3b 36 f3 66 d7 d7 50 ab d4
+    c8 79 bc 1f
+>>> TLS 1.2, RecordHeader [length 0005]
+    14 03 03 00 01
+>>> TLS 1.3, ChangeCipherSpec [length 0001]
+    01
+>>> TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 45
+>>> TLS 1.2, InnerContent [length 0001]
+    16
+>>> TLS 1.3, Handshake [length 0034], Finished
+    14 00 00 30 38 0d 5b 95 aa c2 1e 26 5e c8 63 21
+    4e 18 96 35 2b 91 5b 06 5d a8 12 55 a5 81 aa 0a
+    4f 80 b3 dc 0a ac b9 39 2a 53 f8 1a 14 48 69 a9
+    9c 90 b1 0e
+---
+Certificate chain
+ 0 s:CN=a.test
+   i:CN=a.test
+   a:PKEY: EC, (prime256v1); sigalg: ecdsa-with-SHA256
+   v:NotBefore: Nov  6 13:48:19 2026 GMT; NotAfter: Dec  6 13:48:19 2026 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIBkjCCATigAwIBAgIUJK1kKrHp3R08+KB47TPxbqvrDTswCgYIKoZIzj0EAwIw
+ETEPMA0GA1UEAwwGYS50ZXN0MB4XDTI2MTEwNjEzNDgxOVoXDTI2MTIwNjEzNDgx
+OVowETEPMA0GA1UEAwwGYS50ZXN0MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAE
+ys7osoQOzYOnHSAc5TneUNiCNdbgYvl3wFEBCOc+SqFySO1qlpN9KEVq+f8drrgP
+6R1DTTLX7KNaHb/tHaAfQqNuMGwwHQYDVR0OBBYEFBEIs1jwqBPHMtPkJmDT1MLk
+EidkMB8GA1UdIwQYMBaAFBEIs1jwqBPHMtPkJmDT1MLkEidkMA8GA1UdEwEB/wQF
+MAMBAf8wGQYDVR0RBBIwEIIGYS50ZXN0ggZiLnRlc3QwCgYIKoZIzj0EAwIDSAAw
+RQIgJN/m6q+tnEHYgeYcjqnKO+XeG1cJ6cV5J16ADJNdujsCIQCI3+XtK3uxrae9
+vMuoIH7+HeIXMLn3+ECW5CnVOCs+pg==
+-----END CERTIFICATE-----
+subject=CN=a.test
+issuer=CN=a.test
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: ecdsa_secp256r1_sha256
+Peer Temp Key: X25519, 253 bits
+---
+SSL handshake has read 802 bytes and written 321 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+Server public key is 256 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 01 0a
+<<< TLS 1.3, InnerContent [length 0001]
+    16
+<<< TLS 1.3, Handshake [length 00f9], NewSessionTicket
+    04 00 00 f5 00 00 01 2c 5e 5e 81 e1 08 00 00 00
+    00 00 00 00 00 00 e0 00 b0 27 fd 8b f4 f6 97 61
+    53 f4 72 8f 1d 6b cb 70 e5 01 98 f9 15 e5 ed b4
+    75 74 7a 3b f1 67 2c d3 8f e6 f8 81 da 25 92 85
+    54 de 34 18 ce 3b 15 e0 cf ac ec 76 10 e7 a4 5f
+    66 31 c5 55 7b 9c ee bb 32 c2 3c 9e 16 38 91 96
+    40 17 ce a5 e1 d8 80 58 17 f2 51 b3 45 68 fc 0f
+    39 9d 1b ce 63 27 03 85 29 88 98 ce f1 05 aa bf
+    26 63 25 dc 4d 09 0a 33 c4 bd c1 c9 f8 01 23 ed
+    84 fa 23 41 77 81 5c ab 1a 70 d2 d0 8a 24 3b a3
+    15 39 c1 c8 c8 26 ee 66 e5 73 4f 15 80 b0 23 18
+    20 be 1d 24 00 90 ac b9 4b c6 8e af e5 42 32 a7
+    ac e9 f9 55 f5 86 81 04 cc 0c 3f 7b 57 07 18 56
+    d0 d2 d5 25 a4 c3 c8 7c 6e d7 bc 58 9b c5 02 4f
+    dd 83 07 13 02 19 fa d3 44 6f a3 4a 26 7b 07 dc
+    12 f6 7d 26 47 3f 0c 00 00
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 3892469E1760E51EED8C265E6E1D546B37A3633CCBD7D734E138F403153242F1
+    Session-ID-ctx: 
+    Resumption PSK: E20FB9B6A1A8D7701345AA91BEA93A2B9F9BA6AAB37F321225DC41F5B392E129BDCA6D84C68718C18037BD746DCEEEE8
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 00 b0 27 fd 8b f4 f6 97-61 53 f4 72 8f 1d 6b cb   ..'.....aS.r..k.
+    0010 - 70 e5 01 98 f9 15 e5 ed-b4 75 74 7a 3b f1 67 2c   p........utz;.g,
+    0020 - d3 8f e6 f8 81 da 25 92-85 54 de 34 18 ce 3b 15   ......%..T.4..;.
+    0030 - e0 cf ac ec 76 10 e7 a4-5f 66 31 c5 55 7b 9c ee   ....v..._f1.U{..
+    0040 - bb 32 c2 3c 9e 16 38 91-96 40 17 ce a5 e1 d8 80   .2.<..8..@......
+    0050 - 58 17 f2 51 b3 45 68 fc-0f 39 9d 1b ce 63 27 03   X..Q.Eh..9...c'.
+    0060 - 85 29 88 98 ce f1 05 aa-bf 26 63 25 dc 4d 09 0a   .).......&c%.M..
+    0070 - 33 c4 bd c1 c9 f8 01 23-ed 84 fa 23 41 77 81 5c   3......#...#Aw.\
+    0080 - ab 1a 70 d2 d0 8a 24 3b-a3 15 39 c1 c8 c8 26 ee   ..p...$;..9...&.
+    0090 - 66 e5 73 4f 15 80 b0 23-18 20 be 1d 24 00 90 ac   f.sO...#. ..$...
+    00a0 - b9 4b c6 8e af e5 42 32-a7 ac e9 f9 55 f5 86 81   .K....B2....U...
+    00b0 - 04 cc 0c 3f 7b 57 07 18-56 d0 d2 d5 25 a4 c3 c8   ...?{W..V...%...
+    00c0 - 7c 6e d7 bc 58 9b c5 02-4f dd 83 07 13 02 19 fa   |n..X...O.......
+    00d0 - d3 44 6f a3 4a 26 7b 07-dc 12 f6 7d 26 47 3f 0c   .Do.J&{....}&G?.
+
+    Start Time: 1793972900
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 01 0a
+<<< TLS 1.3, InnerContent [length 0001]
+    16
+<<< TLS 1.3, Handshake [length 00f9], NewSessionTicket
+    04 00 00 f5 00 00 01 2c 61 3f b6 c8 08 00 00 00
+    00 00 00 00 01 00 e0 00 b0 27 fd 8b f4 f6 97 61
+    53 f4 72 8f 1d 6b cb 14 33 4a e1 e0 20 84 87 04
+    94 e6 4c 6f 7f 95 de 5e 03 0b 34 a1 88 66 6d 96
+    6c b4 37 97 1a 1d 61 ca f7 d8 c6 40 38 f7 37 0c
+    01 0e 43 24 39 bf 16 8d 21 f3 9b b0 2c 60 4e dd
+    92 dc 14 24 61 ea 49 f2 23 51 b8 44 ef aa ad 4c
+    8d 3b d2 fb e0 f5 ed 99 44 d1 32 80 40 5d ff 35
+    26 95 27 d4 02 05 a1 fa 55 67 4b d0 f6 65 b4 f2
+    e2 8b fa 82 f8 b2 96 68 29 ed b8 04 64 90 cd 79
+    cf 63 6e 7d e2 85 1c 4e 6a 83 19 59 a5 bb d8 5e
+    fd dd 1c f3 ef b8 5f 43 6f 8f b8 07 36 f7 49 b7
+    e2 df f3 ec 0d a3 35 02 0e 90 b3 64 fd 05 92 5f
+    a7 fd eb 53 65 e9 63 04 1c 69 07 5a 99 03 2c 0d
+    e2 77 75 64 e5 f7 23 33 64 0d e1 70 74 bb 2c d1
+    8e 29 dd 27 ec c7 e5 00 00
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 59F1B3408C3BC23C80A4A19725FEE89F3452C678C499E110AF81BCFC760D75B8
+    Session-ID-ctx: 
+    Resumption PSK: F7E0F54CDC9166717617533AA6754351DBC8351CE81DB0A88E3230E3379E5C2D4B68EC5C7D747AC5B72E4578186F4D00
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 00 b0 27 fd 8b f4 f6 97-61 53 f4 72 8f 1d 6b cb   ..'.....aS.r..k.
+    0010 - 14 33 4a e1 e0 20 84 87-04 94 e6 4c 6f 7f 95 de   .3J.. .....Lo...
+    0020 - 5e 03 0b 34 a1 88 66 6d-96 6c b4 37 97 1a 1d 61   ^..4..fm.l.7...a
+    0030 - ca f7 d8 c6 40 38 f7 37-0c 01 0e 43 24 39 bf 16   ....@8.7...C$9..
+    0040 - 8d 21 f3 9b b0 2c 60 4e-dd 92 dc 14 24 61 ea 49   .!...,`N....$a.I
+    0050 - f2 23 51 b8 44 ef aa ad-4c 8d 3b d2 fb e0 f5 ed   .#Q.D...L.;.....
+    0060 - 99 44 d1 32 80 40 5d ff-35 26 95 27 d4 02 05 a1   .D.2.@].5&.'....
+    0070 - fa 55 67 4b d0 f6 65 b4-f2 e2 8b fa 82 f8 b2 96   .UgK..e.........
+    0080 - 68 29 ed b8 04 64 90 cd-79 cf 63 6e 7d e2 85 1c   h)...d..y.cn}...
+    0090 - 4e 6a 83 19 59 a5 bb d8-5e fd dd 1c f3 ef b8 5f   Nj..Y...^......_
+    00a0 - 43 6f 8f b8 07 36 f7 49-b7 e2 df f3 ec 0d a3 35   Co...6.I.......5
+    00b0 - 02 0e 90 b3 64 fd 05 92-5f a7 fd eb 53 65 e9 63   ....d..._...Se.c
+    00c0 - 04 1c 69 07 5a 99 03 2c-0d e2 77 75 64 e5 f7 23   ..i.Z..,..wud..#
+    00d0 - 33 64 0d e1 70 74 bb 2c-d1 8e 29 dd 27 ec c7 e5   3d..pt.,..).'...
+
+    Start Time: 1793972900
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+>>> TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 49
+>>> TLS 1.2, InnerContent [length 0001]
+    17
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 a2
+<<< TLS 1.3, InnerContent [length 0001]
+    17
+HTTP/1.1 200 OK
+Server: nginx/1.31.8
+Date: Fri, 06 Nov 2026 13:48:20 GMT
+Content-Type: text/plain
+Content-Length: 3
+Connection: close
+
+ok
+<<< TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 13
+<<< TLS 1.3, InnerContent [length 0001]
+    15
+<<< TLS 1.3, Alert [length 0002], warning close_notify
+    01 00
+closed
+>>> TLS 1.2, RecordHeader [length 0005]
+    17 03 03 00 13
+>>> TLS 1.2, InnerContent [length 0001]
+    15
+>>> TLS 1.3, Alert [length 0002], warning close_notify
+    01 00

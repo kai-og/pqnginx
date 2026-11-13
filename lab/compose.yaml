@@ -1,0 +1,16 @@
+# Laboratorio: un servidor NGINX de Debian 13 y un contenedor desde el que corre la herramienta.
+# Arrancar:   docker compose -f lab/compose.yaml up -d --build
+# Comprobar:  docker compose -f lab/compose.yaml exec herramienta python3 -m pqnginx.verificar servidor --sni a.test --sni b.test
+services:
+  servidor:
+    build: ./servidor
+    hostname: servidor
+
+  herramienta:
+    build: ./herramienta
+    volumes:
+      - ..:/app
+    working_dir: /app
+    depends_on:
+      - servidor
+    command: ["sleep", "infinity"]

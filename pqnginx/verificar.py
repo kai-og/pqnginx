@@ -29,7 +29,8 @@ PERFILES = {
     "solo_hibrido": HIBRIDO,
 }
 
-_GRUPO = re.compile(r"(?:Negotiated TLS1\.3 group|Peer Temp Key|Server Temp Key): ([A-Za-z0-9_]+)")
+# En TLS 1.3 OpenSSL escribe "Negotiated TLS1.3 group: X"; con curvas NIST, "Peer Temp Key: ECDH, prime256v1".
+_GRUPO = re.compile(r"(?:Negotiated TLS1\.3 group|Peer Temp Key|Server Temp Key): (?:ECDH, )?([A-Za-z0-9_]+)")
 _HTTP = re.compile(r"^HTTP/1\.[01] (\d{3})", re.MULTILINE)
 
 

@@ -47,6 +47,28 @@ El servidor arranca con `ssl_ecdh_curve X25519:prime256v1:secp384r1;`, una lista
 
 El servidor registra en `/var/log/nginx/pq.log` el grupo negociado (`$ssl_curve`) y los que ofrece el cliente (`$ssl_curves`). Con NGINX 1.26.3 el híbrido aparece como `0x11ec`.
 
+## Medición en Internet
+
+Para estimar a cuántos servidores podría servir la herramienta, se mide una muestra aleatoria de dominios de la [lista Tranco](https://tranco-list.eu/list/947W2) (`medicion/medir.py`).
+
+- **Conexiones:** cada dominio recibe como máximo siete conexiones TLS 1.3 y una sola petición HTTP a `/`, con pausas entre ellas, como haría un navegador.
+- **Identificación:** el User-Agent es `pqnginx-medicion/0.1 (estudio academico; +https://github.com/kai-og/pqnginx)`.
+- **Qué no se hace:** no se prueban vulnerabilidades ni se cambia nada en ningún servidor.
+- **Publicación:** solo se publican resultados agregados. No se publica qué dominio está en cada categoría.
+
+Los servidores NGINX sin CDN delante se clasifican así:
+
+| Categoría | Qué se ve desde fuera |
+|---|---|
+| A | Elige el híbrido |
+| B | Acepta el híbrido pero no lo elige |
+| C1 | No admite el híbrido y usa la lista de grupos por defecto: biblioteca antigua |
+| C2 | No admite el híbrido y tiene una lista restringida: la configuración lo bloquea |
+
+C1 y C2 se distinguen porque la lista por defecto de OpenSSL acepta X448 y secp521r1, y las listas copiadas de las guías no. Es una deducción y puede equivocarse.
+
+**Para quedar fuera de la medición,** abre un issue en este repositorio con el dominio. Se añadirá a `medicion/excluidos.txt`.
+
 ## Pruebas
 
 ```bash

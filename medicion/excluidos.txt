@@ -1,0 +1,1 @@
+# Dominios excluidos de la medición, uno por línea

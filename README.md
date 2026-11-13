@@ -67,6 +67,8 @@ Los servidores NGINX sin CDN delante se clasifican así:
 
 C1 y C2 se distinguen porque la lista por defecto de OpenSSL acepta X448 y secp521r1, y las listas copiadas de las guías no. Es una deducción y puede equivocarse.
 
+El medidor se niega a medir si el equipo intercepta HTTPS, como hacen algunos antivirus y proxies corporativos. En ese caso respondería el interceptor y no el servidor; Norton, por ejemplo, negocia él mismo el híbrido.
+
 **Para quedar fuera de la medición,** abre un issue en este repositorio con el dominio. Se añadirá a `medicion/excluidos.txt`.
 
 ## Pruebas

@@ -46,6 +46,13 @@ CABECERAS_CDN = ("cf-ray", "x-amz-cf-id", "x-amz-cf-pop", "x-served-by", "x-fast
 VIA_CDN = re.compile(r"varnish|cloudfront|akamai|fastly|cdn|incapsula", re.I)
 PAUSA = 0.3  # segundos entre conexiones al mismo servidor
 
+# Antivirus y proxies que interceptan HTTPS firman con su propia raíz: si aparece en la cadena,
+# el handshake medido es el del interceptor y no el del servidor.
+# Se mira el emisor del certificado ("i:" en la cadena, "issuer=" o "depth=N"): el interceptor
+# a veces solo envía el certificado final, firmado por su raíz.
+INTERCEPTOR = re.compile(r"^\s*(?:depth=\d+ |i:|issuer=).*(Norton|Avast|AVG|Kaspersky|ESET|Bitdefender|Sophos|"
+                         r"Fortinet|Zscaler|for SSL/TLS scanning)", re.MULTILINE | re.IGNORECASE)
+
 
 def conectar(host: str, grupos: str, peticion: str = "", espera: float = 8) -> dict:
     """Un handshake TLS 1.3 con la lista de grupos dada; si hay petición, la envía y lee la respuesta."""
@@ -58,9 +65,15 @@ def conectar(host: str, grupos: str, peticion: str = "", espera: float = 8) -> d
                            errors="replace", timeout=espera)
         salida = r.stdout + r.stderr
     except subprocess.TimeoutExpired:
-        return {"tcp": False, "grupo": None, "hrr": False, "cabeceras": {}}
+        return {"tcp": False, "grupo": None, "hrr": False, "cabeceras": {}, "interceptado": False}
     grupo, hrr, _ = analizar(salida)
-    return {"tcp": "CONNECTED(" in salida, "grupo": grupo, "hrr": hrr, "cabeceras": cabeceras(salida)}
+    return {"tcp": "CONNECTED(" in salida, "grupo": grupo, "hrr": hrr, "cabeceras": cabeceras(salida),
+            "interceptado": interceptado(salida)}
+
+
+def interceptado(salida: str) -> bool:
+    """True si la cadena de certificados la firma un antivirus o un proxy que intercepta HTTPS."""
+    return bool(INTERCEPTOR.search(salida))
 
 
 def cabeceras(salida: str) -> dict:
@@ -103,6 +116,8 @@ def medir_dominio(dominio: str) -> dict:
     else:
         return res | {"estado": "sin_conexion"}
     res["host"] = host
+    if primera["interceptado"]:
+        return res | {"estado": "interceptado"}
     if not primera["grupo"]:
         return res | {"estado": "sin_tls13"}
     cab = primera["cabeceras"]
@@ -141,6 +156,8 @@ def cmd_medir(a):
     if salida.exists():  # permite reanudar
         hechos = {json.loads(l)["dominio"] for l in salida.read_text().splitlines() if l.strip()}
     pendientes = [d for d in dominios if d not in hechos]
+    if conectar("github.com", AMPLIO)["interceptado"]:
+        sys.exit("Este equipo intercepta HTTPS (antivirus o proxy): lo medido sería el interceptor. No se mide nada.")
     print(f"{len(pendientes)} dominios pendientes ({len(hechos)} ya medidos)", flush=True)
     cerrojo = threading.Lock()
     with salida.open("a", encoding="utf-8") as f, ThreadPoolExecutor(a.hilos) as ex:
